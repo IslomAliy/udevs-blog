@@ -6,43 +6,6 @@
     margin-top: 64px;
 }
 
-.author-image {
-    display: block;
-    margin: 0 auto;
-    margin-bottom: 16px;
-}
-
-.author-name {
-    font-size: 24px;
-    font-weight: 500;
-    text-align: center;
-    margin-bottom: 19px;
-}
-
-button {
-    cursor: pointer;
-}
-
-.follow-button {
-    background-color: #1B5BF7;
-    color: #fff;
-    border-radius: 16px;
-    font-size: 18px;
-    font-weight: 500;
-    padding: 8px 38px;
-    border: none;
-    outline: none;
-    margin-right: 18px;
-}
-
-.draft-button {
-    padding: 12px 15px;
-    background-color: #1B5BF7;
-    outline: none;
-    border: none;
-    border-radius: 8px;
-    vertical-align: center;
-}
 
 .photo-author-name {
     color: #2D2D2D;
@@ -76,27 +39,6 @@ button {
     align-self: flex-start;
 }
 
-.best-blogs-img {
-    margin-right: 22px;
-}
-
-.blogs-heading {
-    font-size: 18px;
-    font-weight: 700;
-    width: 232px;
-    margin-bottom: 8px;
-}
-
 .best-blogs-heading {
     margin-bottom: 26px;
-}
-
-.blogs-card {
-    display: flex;
-    align-items: center;
-    align-content: center;
-}
-
-.heading-and-date {
-    align-self: flex-end;
 }
