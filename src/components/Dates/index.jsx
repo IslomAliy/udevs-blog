@@ -6,7 +6,7 @@ const Dates = (props) => {
       <span className="time">{props.time}</span>
       <span className="date">{props.date}</span>
       <span className="sign">|</span>
-      <img src="/images/eye.svg" alt="eye" className="eye"/>
+      <img src="../images/eye.svg" alt="eye" className="eye"/>
       <span className="view-count">{props.viewCount}</span>
     </div>
   );
