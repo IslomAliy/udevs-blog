@@ -1,8 +1,6 @@
 import { useState, useEffect } from "react";
 
 import Container from "../Container";
-import Header from "../Header";
-import Footer from "../Footer";
 import "./BlogSingle.scss";
 import Dates from "../Dates";
 import axios from "axios";
@@ -12,23 +10,27 @@ import BestBlogs from "../BestBlogsCard";
 
 const BlogSingle = () => {
   const { id } = useParams();
+  console.log("ID = ", id)
   const [post, setPost] = useState([]);
 
   useEffect(() => {
+    getPost();
+  }, []);
+
+  const getPost = () => {
     axios
       .get(`https://jsonplaceholder.typicode.com/posts/${id}`)
       .then((data) => {
         setPost(data);
-        console.log(data);
+        // console.log(post);
       })
       .catch((error) => {
         console.error(error);
       });
-  });
+  };
 
   return (
     <div>
-      <Header />
       <Container>
         <div className="blog-single">
           <Author />
@@ -55,7 +57,6 @@ const BlogSingle = () => {
           </div>
         </div>
       </Container>
-      <Footer />
     </div>
   );
 };

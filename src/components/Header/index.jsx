@@ -9,12 +9,12 @@ const Header = () => {
         <div className="header-menu-wrapper">
           <div className="logo">
             <Link to="/">
-              <img src="images/logo.svg" alt="logo" />
+              <img src="/images/logo.svg" alt="logo" />
             </Link>
           </div>
           <div className="right-side">
             <img
-              src="images/notifications.svg"
+              src="/images/notifications.svg"
               alt="notifications"
               className="notifications"
             />
