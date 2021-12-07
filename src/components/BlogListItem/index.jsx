@@ -15,6 +15,7 @@ const BlogListItem = () => {
     axios
       .get("https://jsonplaceholder.typicode.com/posts")
       .then(({ data }) => {
+        data.splice(12)
         setPosts(data);
       })
       .catch((error) => {
