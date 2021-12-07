@@ -28,7 +28,7 @@ const BlogListItem = () => {
       {<p>Loading</p> &&
         posts.map((item, id) => (
           <Link
-            to={`/post/${item.id}`}
+            to={`/post/${id}`}
             className="blog-list-item"
             key={id}
           >

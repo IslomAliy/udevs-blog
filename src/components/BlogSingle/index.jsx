@@ -6,12 +6,12 @@ import Dates from "../Dates";
 import axios from "axios";
 import { useParams } from "react-router";
 import Author from "../Author";
-import BestBlogs from "../BestBlogsCard";
+import BestBlogsCard from "../BestBlogsCard";
 
 const BlogSingle = () => {
+  const [post, setPost] = useState([]);
   const { id } = useParams();
   console.log("ID = ", id)
-  const [post, setPost] = useState([]);
 
   useEffect(() => {
     getPost();
@@ -20,9 +20,9 @@ const BlogSingle = () => {
   const getPost = () => {
     axios
       .get(`https://jsonplaceholder.typicode.com/posts/${id}`)
-      .then((data) => {
+      .then(({data}) => {
         setPost(data);
-        // console.log(post);
+        console.log(data);
       })
       .catch((error) => {
         console.error(error);
@@ -53,7 +53,9 @@ const BlogSingle = () => {
 
           <div className="best-blog">
             <h1 className="best-blogs-heading">ЛУЧШИЕ БЛОГИ</h1>
-            <BestBlogs />
+            <BestBlogsCard />
+            <BestBlogsCard />
+            <BestBlogsCard />
           </div>
         </div>
       </Container>
