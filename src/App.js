@@ -1,15 +1,16 @@
-import BlogList from "./components/BlogList";
-import Footer from "./components/Footer";
-import Header from "./components/Header";
-import Menu from "./components/Menu";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import BlogSinglePage from "./pages/BlogSinglePage";
+import Home from "./pages/Home";
 
 function App() {
   return (
     <>
-      <Header/>
-      <Menu/>
-      <BlogList/>
-      <Footer/>
+    <Router>
+      <Routes>
+        <Route exact path="/" element={<Home/>} />
+        <Route path="/post/:id" element={<BlogSinglePage/>} />
+      </Routes>
+    </Router>
     </>
   );
 }
