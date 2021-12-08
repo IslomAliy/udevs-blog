@@ -22,7 +22,7 @@ const Header = () => {
       setIsOpen(false)
     }
     else {
-      console.log('false')
+      alert("If you don't know exact login and password, you'd better get lost!")
     }
   }
 
