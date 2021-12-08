@@ -19,7 +19,7 @@ const BlogListItem = () => {
         setPosts(data);
       })
       .catch((error) => {
-        console.error(error);
+        console.error(error); 
       });
   };
 
@@ -27,7 +27,7 @@ const BlogListItem = () => {
     <>
       {<p>Loading</p> &&
         posts.map((item, id) => (
-          <Link
+          <Link 
             to={`/post/${item.id}`}
             className="blog-list-item"
             key={id}
