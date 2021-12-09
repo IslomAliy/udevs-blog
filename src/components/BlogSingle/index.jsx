@@ -7,26 +7,37 @@ import axios from "axios";
 import { useParams } from "react-router";
 import Author from "../Author";
 import BestBlogsCard from "../BestBlogsCard";
+import { db } from "../../firebase";
+import { collection, getDocs } from "@firebase/firestore";
 
 const BlogSingle = () => {
   const [post, setPost] = useState([]);
+  console.log('post = ', post)
   const { id } = useParams();
-  console.log("ID = ", id)
+  console.log("ID = ", id);
+  const postCollectionRef = collection(db, "posts");
 
   useEffect(() => {
-    getPost();
+    getPostFromStore();
   }, []);
 
-  const getPost = () => {
-    axios
-      .get(`https://jsonplaceholder.typicode.com/posts/${id}`)
-      .then(({data}) => {
-        setPost(data);
-        console.log(data);
-      })
-      .catch((error) => {
-        console.error(error);
-      });
+  // const getPost = () => {
+  //   axios
+  //     .get(`https://jsonplaceholder.typicode.com/posts/${id}`)
+  //     .then(({data}) => {
+  //       setPost(data);
+  //       console.log(data);
+  //     })
+  //     .catch((error) => {
+  //       console.error(error);
+  //     });
+  // };
+
+  const getPostFromStore = () => {
+    getDocs(postCollectionRef).then((res) => {
+      setPost(res.docs.map((doc) => ({ ...doc.data(), id: doc.id })));
+      console.log(res.docs.map((doc) => ({ ...doc.data(), id: doc.id })));
+    });
   };
 
   return (
@@ -47,7 +58,7 @@ const BlogSingle = () => {
             </div>
             <div className="article">
               <h1 className="article-heading">{post.title}</h1>
-              <p className="article-body">{post.body}</p>
+              <p className="article-body">{post.description}</p>
             </div>
           </div>
 

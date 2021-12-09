@@ -1,7 +1,10 @@
 .blog-list {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr;
-    grid-row-gap: 48px;
-    grid-column-gap: 24px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  height: max-content;
+
+  &:not(last-child) {
+    margin-bottom: 100px;
+  }
 }

@@ -81,7 +81,7 @@ const Header = () => {
                 className="header-menu-button"
                 onClick={() => setIsOpen(true)}
               >
-                Войти
+                Войти  
               </button>
             )}
             {isAuthorized && (
@@ -94,7 +94,7 @@ const Header = () => {
             {isAuthorized && (
               <button
                 className="log-out-btn"
-                onClick={logOut}
+                onClick={logOut }
               >
                 Log Out
               </button>
