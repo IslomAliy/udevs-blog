@@ -1,10 +1,8 @@
 .blog-list {
   display: flex;
   justify-content: space-between;
+  align-content: center;
   flex-wrap: wrap;
-  height: max-content;
-
-  &:not(last-child) {
-    margin-bottom: 100px;
-  }
+//   height: max-content;
+  row-gap: 130px;
 }

@@ -6,7 +6,7 @@ const BlogList = () => {
   return (
     <Container>
       <div className="blog-list">
-          <BlogListItem />
+          <BlogListItem /> 
       </div>
     </Container>
   );
