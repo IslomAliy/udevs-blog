@@ -5,7 +5,7 @@ import "./BlogList.scss";
 const BlogList = () => {
   return (
     <Container>
-      <div className="blog-list">
+      <div className="blog-list">  
           <BlogListItem /> 
       </div>
     </Container>

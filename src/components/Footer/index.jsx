@@ -7,7 +7,7 @@ const Footer = () => {
       <Container>
         <div className="footer-content">
           <div className="logo-content">
-            <img src="images/logo.svg" alt="logo" className="footer-logo"/>
+            <img src="../images/logo.svg" alt="logo" className="footer-logo"/>
             <p className="logo-content-desc">
               Помощник в публикации статей, журналов. Список популярных
               международных конференций. Всё для студентов и преподавателей.

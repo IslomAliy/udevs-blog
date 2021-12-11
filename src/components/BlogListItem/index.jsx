@@ -42,7 +42,7 @@ const BlogListItem = () => {
             className="blog-list-item"
             key={id}
           >
-            <img src={item.image} alt="kid" className="item-image" />
+            <img src={item.image} alt="blog-image" className="item-image" />
             <Dates time="18:21" date="11.01.2021" viewCount="365" />
             <h1 className="item-heading">{item.title}</h1>
           </Link>

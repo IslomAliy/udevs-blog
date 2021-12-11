@@ -92,6 +92,10 @@
         color: #fff;
         border: none;
         border-radius: 6px;
+
+        &:hover {
+            opacity: 0.9;
+        }
     }
 }
 
@@ -119,4 +123,18 @@
     background-color: #1B5BF7;
     border-radius: 6px;
     border: none;
+}
+
+.sign-up {
+    margin-top: 20px;
+    text-align: center;
+
+    a {
+        color: #1B5BF7;
+
+        &:hover {
+            opacity: 0.9;
+        }
+    }
+
 }

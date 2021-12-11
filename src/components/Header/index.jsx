@@ -37,7 +37,7 @@ const Header = () => {
       <Container>
         <div className={`modal ${isOpen ? "visible" : ""}`}>
           <div className="modal-wrapper">
-            <h3 className="modal-heading">Вход на udevs news</h3>
+            <h3 className="modal-heading">Вход на Udevs News</h3>
             <form className="modal-form" onSubmit={onSubmit}>
               <input
                 className="email-input"
@@ -54,8 +54,9 @@ const Header = () => {
                 onChange={(e) => setPassword(e.target.value)}
               />
               <button type="submit" className="modal-button">
-                Register
+                Log In
               </button>
+              <p className="sign-up">Нет учетной записи? <Link to="/signup">Зарегистрироваться</Link></p>
             </form>
           </div>
         </div>
