@@ -6,13 +6,13 @@ import Home from "./pages/Home";
 function App() {
   return (
     <>
-    <Router>
-      <Routes>
-        <Route exact path="/" element={<Home/>} />
-        <Route path="/post/:id" element={<BlogSinglePage/>} />
-        <Route path="/signup" element={<SignUp/>} />
-      </Routes>
-    </Router>
+        <Router>
+          <Routes>
+            <Route exact path="/" element={<Home />} />
+            <Route path="/post/:id" element={<BlogSinglePage />} />
+            <Route path="/signup" element={<SignUp />} />
+          </Routes>
+        </Router>
     </>
   );
 }
