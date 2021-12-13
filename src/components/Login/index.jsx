@@ -1,4 +1,4 @@
-import './Login.scss'
+import "./Login.scss";
 import { Link } from "react-router-dom";
 import { useState } from "react";
 import {
@@ -33,10 +33,8 @@ const Login = () => {
   //   }
   // };
 
-
-
   onAuthStateChanged(auth, (curentUser) => {
-      setUser(curentUser);
+    setUser(curentUser);
   });
 
   const logIn = async (e) => {
@@ -45,11 +43,10 @@ const Login = () => {
       const user = await signInWithEmailAndPassword(auth, email, password);
       localStorage.setItem("isAuthorized", true);
       setIsOpen(false);
-    } 
-    catch(error) {
-      alert(error.message)
+    } catch (error) {
+      alert(error.message);
     }
-  }
+  };
 
   const logOut = async () => {
     await signOut(auth);
@@ -105,21 +102,33 @@ const Login = () => {
             Войти
           </button>
         )}
-        {isAuthorized && 
-          <p className='user-email'>User logged in with: <span className='user-email-inner'>{user?.email}</span></p>
-        }
         {isAuthorized && (
-          <img
-            src="/images/person.jpg"
-            alt="person-img"
-            className="persons-img-logged-in"
-          />
+          <p className="user-email">
+            User logged in with:{" "}
+            <span className="user-email-inner">{user?.email}</span>
+          </p>
         )}
         {isAuthorized && (
+          <div className="dropdown">
+            <button className="dropdown-btn">
+              <img
+                src="/images/person.jpg"
+                alt="person-img"
+                className="persons-img-logged-in"
+              />
+            </button>
+            <div className="dropdown-content">
+              <Link to="/createpost" className="dropdown-content-link">Написать публикацию</Link>
+              <Link to="/" className="dropdown-content-link">Избранные</Link>
+              <button className="dropdown-content-btn" onClick={logOut}>Выйти</button>
+            </div>
+          </div>
+        )}
+        {/* {isAuthorized && (
           <button className="log-out-btn" onClick={logOut}>
             Log Out
           </button>
-        )}
+        )} */}
       </div>
     </>
   );
